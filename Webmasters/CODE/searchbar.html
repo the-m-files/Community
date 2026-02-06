@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    line-height: 1.6;
+  }
+
+  .search-container {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px 0;
+    margin-bottom: 30px;
+  }
+
+  #searchInput{
+   width:auto;
+   height:40px;
+   background-color:rgb(196, 195, 195);
+
+  }
+  
+  input {
+    padding: 10px;
+    width: 280px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .section {
+    margin-bottom: 120px;
+    padding: 20px;
+    border-left: 5px solid #ccc;
+  }
+
+  .highlight {
+    background-color: yellow;
+    transition: background-color 1.5s ease;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="search-container">
+  <input id="searchInput" placeholder="Search (typos allowed)..." />
+  <button onclick="search()">Search</button>
+</div>
+
+<div class="section" data-search="shelter housing homeless food">
+  <h2>Shelters</h2>
+  <p>Safe housing and basic needs.</p>
+</div>
+
+<div class="section" data-search="health clinic medical counseling mental">
+  <h2>Health Services</h2>
+  <p>Medical and mental health care.</p>
+</div>
+
+<div class="section" data-search="education school learning training">
+  <h2>Education</h2>
+  <p>Learning and job training programs.</p>
+</div>
+
+</body>
+</html>

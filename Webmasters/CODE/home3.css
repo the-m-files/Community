@@ -1,0 +1,219 @@
+/*//////////
+//GENERAL//
+////////*/
+html { font-size:16px; }
+body {
+  margin:0; padding:0;
+  font-family:'Inter', system-ui, sans-serif;
+  color: rgba(255,255,255,0.9);
+  background:#121212;
+  overflow-x:hidden;
+}
+* { box-sizing:border-box; }
+
+/*//////////
+//NAVBAR///
+////////*/
+.navbar {
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index:100;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding:15px 30px;
+  background: rgba(112,224,190,0);
+  backdrop-filter: blur(5px);
+  transition: background 0.4s ease;
+}
+.navbar a {
+  margin:0 10px;
+  padding:10px 18px;
+  font-weight:600;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s, transform 0.2s;
+}
+.navbar a:hover { background:#41f9c2; color:#000; transform:translateY(-2px); }
+.navbar.scrolled { background: rgba(112,224,190,0.85); }
+.navbar.scrolled a { color:black; }
+
+/* Search */
+.search-container { position:relative; width:220px; margin-left:15px; }
+.searchInput {
+  width:100%;
+  padding:6px 10px 6px 30px;
+  border-radius:20px;
+  border:none;
+  font-size:15px;
+}
+.searchInput::-webkit-search-cancel-button { -webkit-appearance:none; appearance:none; cursor:pointer; }
+.search-icon {
+  position:absolute;
+  left:8px; top:50%;
+  transform:translateY(-50%);
+  color:#888; font-size:16px;
+}
+.navbar.scrolled .search-icon { color:black; }
+
+/*//////////
+//HERO//////
+////////*/
+.hero {
+  position:relative;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+}
+#header-bkg {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background: linear-gradient(to right, rgba(112,224,190,0.5), rgba(58,123,213,0.5)),
+              url("/TSA images/hikingtrails-unsplash.jpg") center/cover no-repeat;
+}
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  z-index:1;
+}
+.hero-title {
+  z-index:2;
+  font-family:"Archivo Black", sans-serif;
+  font-size: clamp(4rem,8vw,6.5rem);
+  font-weight:900;
+  line-height:1;
+  margin:0;
+  background: linear-gradient(90deg,#70e0be,#41f9c2,#7af2ff);
+  /* -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+   */
+}
+#subhead {
+  z-index:2;
+  position:relative;
+  color:#FFD700;
+  font-size:clamp(1.75rem,2vw,2rem);
+  margin-top:15px;
+  animation: slideUpFade 1s ease forwards;
+}
+@keyframes slideUpFade { from{opacity:0; transform:translateY(-20px);} to{opacity:1; transform:translateY(0);} }
+
+/*//////////
+//SERVICES//
+////////*/
+.Hinfos {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin:50px auto;
+  gap:20px;
+}
+.mission,.purpose,.offers {
+  flex:1 1 250px;
+  background:#fff;
+  color:#000;
+  padding:25px;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+  transition:0.3s;
+  cursor:pointer;
+}
+.mission:hover,.purpose:hover,.offers:hover {
+  transform:translateY(-10px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/*//////////
+//HEALTH/ABOUT//
+////////////*/
+.Health {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  max-width:1200px;
+  margin:80px auto;
+  gap:30px;
+  padding:40px 20px;
+  border-radius:40px;
+  background:linear-gradient(120deg, rgba(232,183,255,0.3), rgba(255,255,255,0.1));
+}
+.Health h2 {
+  width:100%;
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:30px;
+  color:#fff;
+}
+.Gym,.Clinic,.Dentist,.Therapy {
+  flex:1 1 250px;
+  padding:25px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(5px);
+  color:#fff;
+}
+.Gtitle,.Ctitle,.Dtitle,.Ttitle {
+  text-align:center;
+  font-size:1.5rem;
+  margin-bottom:10px;
+}
+
+/*//////////
+//CALL TO ACTION//
+////////////////*/
+.paragraph {
+  background:#222;
+  padding:40px 20px;
+  margin:50px auto;
+  max-width:800px;
+  border-radius:20px;
+  text-align:center;
+  color:#fff;
+}
+.paragraph h4 { margin-bottom:15px; font-size:1.5rem; }
+.paragraph .cta-button {
+  display:inline-block;
+  padding:12px 30px;
+  margin-top:20px;
+  background:#41f9c2;
+  color:#000;
+  font-weight:600;
+  border-radius:25px;
+  text-decoration:none;
+  transition:0.3s;
+}
+.paragraph .cta-button:hover {
+  transform:translateY(-3px);
+  background:#70e0be;
+}
+
+/*//////////
+//FOOTER//
+////////*/
+footer {
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#bbb;
+  background:#111;
+}
+
+/*//////////
+//RESPONSIVE//
+////////////*/
+@media(max-width:900px){
+  .Hinfos,.Health { flex-direction:column; align-items:center; }
+  .navbar { justify-content:center; flex-wrap:wrap; }
+  .search-container { margin-top:10px; width:100%; }
+  .hero-title { font-size:clamp(3rem,8vw,5rem); }
+  #subhead { font-size:clamp(1.5rem,2vw,1.8rem); }
+}

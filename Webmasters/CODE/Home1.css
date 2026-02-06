@@ -1,0 +1,257 @@
+.header {
+      width: 100%;
+      height:500px;
+    display: flex;
+    padding: 100px 50px;         
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.929);
+    box-sizing: border-box;    
+    flex-wrap:wrap;   
+    display:grid;
+    grid-template-rows: auto, auto;
+    grid-template-columns: auto, 300px;
+
+    
+}
+
+/* =========================
+   NAVBAR (FIXED ONLY)
+========================= */
+/* hi bro where is seesion chat*/
+.navbar {
+    width: 100vw;         
+    height: auto;
+    margin: 0px;         
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;  
+    justify-content: right;
+
+    background: linear-gradient(to bottom, rgba(78, 0, 141, 0.366));
+    backdrop-filter: blur(3px);
+
+    z-index: 100;        
+}
+
+
+.navbar a {
+    background-color: rgb(158, 0, 202);
+    color: rgba(255, 255, 255, 0.625);
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    line-height: 1;       /* helps alignment consistency */
+}
+
+
+
+
+/* SEARCH RESULTS */ 
+.search-container {
+background-color:rgba(0,0,0,0);
+}
+#searchInput{
+    background-color:#ffffff;
+    border-width:0pc;
+    border-radius:10px;
+    width:auto;
+    height:30px;
+}
+.search-container  button {
+ align-self:center;
+ height:30px;
+ border-radius:10px;
+ border-width:0px;
+  }
+  .highlight {
+  background-color: yellow;
+  transition: background-color 1.5s ease;
+}
+
+/* =========================
+   NAV ANIMATION (UNCHANGED)
+========================= */
+@keyframes radiant-nav {
+    0% { background: #00072d; }
+    10% { background-color: #001c55; }
+    20% { background-color: #0a2472; }
+    30% { background-color: #0e6ba8; }
+    40% { background-color: #53707c; }
+    50% { background-color: #679aae; }
+    60% { background-color: #858AE3; }
+    70% { background-color: #613DC1; }
+    80% { background-color: #4E148C; }
+    90% { background-color: #2C0735; }
+    100% { background: #00072d; }
+}
+
+/* =========================
+   TITLE (UNCHANGED)
+========================= */
+#title {
+    font-family: "Archivo Black";
+    font-weight: 900;
+    font-size: 110px;
+    letter-spacing: -4px;
+    margin: 0;
+    position: relative;
+    background-image: linear-gradient(to right, black, rgb(181, 181, 181));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    justify-content: flex-start;
+    display:100%;
+    width:auto;
+}
+#title {
+    font-family: "Archivo Black";
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+#Unity::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 10px;
+    background-color: rgb(186, 16, 186);
+}
+
+/* =========================
+   SUBHEADING (LEFT AS-IS)
+========================= */
+#subheading {
+      font-size: 30px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: -30px;
+    width:auto;
+    align-self: flex-start; /* vertical alignment in flex container */
+    text-align: left;       /* aligns text inside the element */
+    color:hsl(292, 80%, 52%);  
+    padding:10px;
+    display:inline-block;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* prevents accidental horizontal scroll */
+    box-sizing: border-box;/* everything includes padding/border inside width */
+    background-color: rgba(228, 206, 238, 0.525);
+     font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.85);
+
+}
+html {
+  font-size: 16px;
+}
+
+.Health{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    background-color: #e6ceffab;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    border-radius: 40px;
+}
+
+.Health h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 30px 0;
+}
+
+.Homeless-shelter, .Police, .Library, .Parks{
+    background: linear-gradient(to bottom, rgba(232, 183, 255, 0.312));
+    backdrop-filter: blur(3px);
+    width: 100%;
+    max-width: 520px;
+    padding: 25px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Htitle, .Ptitle, .Ltitle{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.Hinfos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission, .purpose, .offers{
+    background-color: #e6ceffab;
+    flex:1 1 250px;
+    border-radius: 15px;
+    margin:10px;
+    margin-right:5px;
+    margin-left:5px;
+    padding:10px;
+}
+
+.mtitle, .ptitle, .otitle{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.mtext, .ptext, .otext{
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.paragraph{
+    max-width: 100%;
+    background-color: #e6ceffab;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.paragraph h4{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.p1, .p2{
+    line-height: 1.6;
+    font-size: 16px;
+}
+.Htitle, .Ptitle, .Ltitle,
+.mtitle, .ptitle, .otitle {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+}
+.mtext, .ptext, .otext,
+.p1, .p2, .paragraph p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.8);
+}
+
